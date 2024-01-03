@@ -16,15 +16,15 @@ bool f_largo=LOW; //Temporizador 10seg (LoW= 5 seg : HIGH=10 seg)
 bool f=LOW;
 bool f_estado=LOW; //estado anterior -> f
 
-void setup() {
-
+void setup() 
+{
   pinMode(temporizado, INPUT);
   pinMode(disparo, INPUT);
   pinMode(amarillo, OUTPUT);
   pinMode(verde, OUTPUT);
   pinMode(rojo, OUTPUT);
 
-    for(int i=0;i<2;i++)
+  for(int i=0;i<2;i++)
   {
     digitalWrite(verde,HIGH);	//Verde -> Prendido
     digitalWrite(rojo,HIGH);	//Rojo -> Prendido
@@ -35,8 +35,8 @@ void setup() {
   }
 }
 
-void loop() {
-
+void loop()
+{
   stand_by(); //Llama la funcion que hace el punto "B"
   oscilacion_verde();	// Llama f()-> "C";
   retorno_stand_by();
@@ -65,7 +65,7 @@ void oscilacion_verde()
   f_estado=digitalRead(temporizado);	//guardo el estado actual para la proxima vez que aprieto el temporizador
 
   //PUNTO C y D
-  if(e==0 && digitalRead(disparo)) //Pulsador(izq) ->PresionÛ	?
+  if(e==0 && digitalRead(disparo)) //Pulsador(izq) ->Presion√≥	?
   {
     cd=HIGH;	// bandera cd=1
   }
