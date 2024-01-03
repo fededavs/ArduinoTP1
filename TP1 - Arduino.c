@@ -15,7 +15,7 @@ bool e_suelto=LOW;
 bool f_largo=LOW; //Temporizador 10seg (LoW= 5 seg : HIGH=10 seg)
 bool f=LOW;
 bool f_estado=LOW; //estado anterior -> f
-
+ 
 void setup() 
 {
   pinMode(temporizado, INPUT);
