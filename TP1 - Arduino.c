@@ -57,7 +57,9 @@ void oscilacion_verde()
   {
       digitalWrite(amarillo,HIGH); //Se prende LED amarillo
       tiempo=1000;					// tiempo necesario para los 10 segundos
-  }else{							//Caso contrario, queda el delay total de 5 segundos y LED apagado
+  }
+  else
+  {							  //Caso contrario, queda el delay total de 5 segundos y LED apagado
       digitalWrite(amarillo,LOW);
       tiempo=500;
   }
@@ -72,7 +74,7 @@ void oscilacion_verde()
 
   if(cd && digitalRead(disparo)==0) //CD=1 y (disparo)=0 (soltar boton)
   {
-  	for(int i=0;i<5;i++)	//Verde->5 destellos que da en total 5segundos o 10 segundos, segun el temporizado
+    for(int i=0;i<5;i++)	 //Verde->5 destellos que da en total 5segundos o 10 segundos, segun el temporizado
     {
       digitalWrite(verde,HIGH);	//Verde -> Prendido
       delay(tiempo);					//Variable tiempo= depende si esta en 50 o 100 mseg
